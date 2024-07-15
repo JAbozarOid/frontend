@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p.title {
+        font-weight: bold;
+        font-size: 32px;
+        color: black;
+        width: 400px; /* Set the width of the paragraph container */
+        word-wrap: break-word; /* Break long words to fit within the container */
+        white-space: normal; /* Allow text to wrap normally */
+        overflow-wrap: break-word; /* Ensure long words break and wrap */
+        padding: 10px; /* Optional: Add some padding for better readability */
+      }
+      p.description {
+        margin-left: 16px;
+        color: blue;
+        font-weight: lighter;
+        font-size: 24px;
+        width: 300px; /* Set the width of the paragraph container */
+        word-wrap: break-word; /* Break long words to fit within the container */
+        white-space: normal; /* Allow text to wrap normally */
+        overflow-wrap: break-word; /* Ensure long words break and wrap */
+        border: 1px solid #ccc; /* Optional: Add a border to see the container */
+        padding: 5px;
+      }
+      img {
+        width: 500px;
+        height: 500px;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+      }
+      .container img {
+        margin-left: 150px;
+      }
+      .wrapper {
+        position: relative;
+        padding-left: 60px; /* Add padding to make room for the image */
+        padding-bottom: 200px;
+        padding-top: 100px;
+      }
+      .wrapper img {
+        position: absolute;
+        left: 500px;
+        top: 0;
+      }
+      .div1,
+      .div2 {
+        padding: 70px;
+        border: 1px solid transparent;
+      }
+      .div1 {
+        border-bottom: 2px solid #000; /* Border bottom for the first div */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <p class="title">1- Shared Hosting</p>
+      <p class="description">slow performance</p>
+      <p class="description">small websites</p>
+      <p class="description">practice environment</p>
+      <p class="description">free with limitation</p>
+      <img src="images/sharedhosting.png" alt="shared hosting image" />
+    </div>
+    <div class="wrapper">
+      <p class="title">2- Virtual Private Surface</p>
+      <p class="description">
+        is a virtual server with dedicated cpu, memory and bandwith resources
+      </p>
+      <img src="images/vpshosting.png" alt="vps hosting" />
+    </div>
+    <div class="wrapper">
+      <p class="title">3- Dedicated hosting</p>
+      <img src="images/dedicatedhos,ting.png" alt="dedicated hosting" />
+    </div>
+    <div class="wrapper">
+      <p class="title">4- Cloud Hosting</p>
+      <p class="description">
+        which spans across multiple physical and virtual servers
+      </p>
+      <p class="description">
+        if a physical or virtual server fails your website run on a different
+        server and stay online
+      </p>
+      <p class="description">no limitation</p>
+      <p class="description">higher cost</p>
+      <p class="description">scalable</p>
+      <img src="images/cloudhosting.png" alt="cloud hosting" />
+    </div>
+  </body>
+</html>
