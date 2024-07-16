@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      p.title {
+        font-weight: bold;
+        font-size: 32px;
+        color: black;
+        width: 400px; /* Set the width of the paragraph container */
+        word-wrap: break-word; /* Break long words to fit within the container */
+        white-space: normal; /* Allow text to wrap normally */
+        overflow-wrap: break-word; /* Ensure long words break and wrap */
+        padding: 10px; /* Optional: Add some padding for better readability */
+      }
+      .container {
+        display: flex;
+        align-items: center;
+      }
+      .container img {
+        margin-left: 150px;
+      }
+      .container a {
+        margin-left: 150px;
+      }
+      img.dimensions {
+        width: 300px;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p class="title">Http status code</p>
+      <img
+        class="dimensions"
+        src="images/httpstatuscode.png"
+        alt="http status code"
+      />
+    </div>
+    <div class="container">
+      <p class="title">full http status code explanation below</p>
+      <a
+        href="https://www.coursera.org/learn/introduction-to-front-end-development/supplement/FqZuK/http-examples"
+        >http status code explanation</a
+      >
+    </div>
+    <div class="container">
+      <p class="title">Other Internet Protocol</p>
+      <a
+        href="https://www.coursera.org/learn/introduction-to-front-end-development/supplement/p7wrY/other-internet-protocols"
+        >Internet Protocols</a
+      >
+    </div>
+    <div class="container">
+      <p class="title">Restfull API</p>
+      <img class="dimensions" src="images/restfullapi.png" alt="restfull api" />
+    </div>
+  </body>
+</html>
