@@ -1,9 +1,15 @@
 import { Fragment } from "react/jsx-runtime";
+import { MouseEvent } from "react";
 
 let items = ["Paris", "London", "Manchester", "Milan", "Rome"];
-items = [];
+//items = [];
 
 const message = items.length === 0 ? <p>No Item Found</p> : null;
+
+// event handler
+// this is type annotation in type script --> event : MouseEvent --> should be imported
+// telling the react calling the function handleClick is later at run time
+const handleClick = (event: MouseEvent) => console.log(event);
 
 const getMessage = () => {
   return items.length === 0 ? <p>No Item Found</p> : null;
@@ -48,8 +54,10 @@ function ListGroup() {
         {/* <li className="list-group-item">A third item</li> */}
         {/* <li className="list-group-item">A fourth item</li> */}
         {/* <li className="list-group-item">And a fifth one</li> */}
-        {items.map((item) => (
-          <li key={item}>{item}</li>
+        {items.map((item, index) => (
+          <li className="list-group-item" onClick={handleClick} key={item}>
+            {item}
+          </li>
         ))}
       </ul>
     </>
