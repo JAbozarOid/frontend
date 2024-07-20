@@ -1,21 +1,31 @@
 import { Fragment } from "react/jsx-runtime";
-import { MouseEvent } from "react";
+import { MouseEvent, useState } from "react";
 
 let items = ["Paris", "London", "Manchester", "Milan", "Rome"];
 //items = [];
 
 const message = items.length === 0 ? <p>No Item Found</p> : null;
 
+const getMessage = () => {
+  return items.length === 0 ? <p>No Item Found</p> : null;
+};
+
 // event handler
 // this is type annotation in type script --> event : MouseEvent --> should be imported
 // telling the react calling the function handleClick is later at run time
 const handleClick = (event: MouseEvent) => console.log(event);
 
-const getMessage = () => {
-  return items.length === 0 ? <p>No Item Found</p> : null;
-};
+// let selectedIndex = 0; // -1 means no item is selected , 0 means first item is selected
+// *** we should inform to react that this component is going to have data or state that may change over time
+// for this purpose we should use one of the built in funtion in react called useState
+// useState Called hook, a hook is a function that allows us to tap in built in feature in react
+// instead of using variable selectedIndex uses useState function
 
 function ListGroup() {
+  const [selectedIndex, setSelectedIndex] = useState(-1); // this function return an array
+  // arr[0]; // variable (selectedIndex)
+  // arr[1]; // updater function
+
   return (
     // *** instead of using div for having multiple elements we can use fragments in react
     // <div>
@@ -55,7 +65,17 @@ function ListGroup() {
         {/* <li className="list-group-item">A fourth item</li> */}
         {/* <li className="list-group-item">And a fifth one</li> */}
         {items.map((item, index) => (
-          <li className="list-group-item" onClick={handleClick} key={item}>
+          <li
+            className={
+              selectedIndex === index
+                ? "list-group-item active"
+                : "list-group-item"
+            }
+            onClick={() => {
+              setSelectedIndex(index);
+            }}
+            key={item}
+          >
             {item}
           </li>
         ))}
