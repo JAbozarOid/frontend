@@ -22,5 +22,98 @@
       module
     </p>
     <p>Event : A signal that something has happened</p>
+
+    <p class="node">requirement for vs code</p>
+    <p>Docker (by Microsoft)</p>
+    <p>ESLint (by Microsoft)</p>
+    <p>Prettier Code formatter (by Prettier)</p>
+    <p>MongoDB for VS Code (by MongoDB)</p>
+
+    <p class="node">setup a frontend project with react</p>
+    <p>$ npm create vite@5.0.0 .</p>
+    <p>framework react and variant is javascript</p>
+    <p>npm install</p>
+    <p>run npm run dev to start the dev server</p>
+
+    <p class="node">Installing the necessary dependencies</p>
+    <p>
+      npm install --save-dev prettier@3.1.0 \ eslint@8.54.0 \
+      eslint-plugin-react@7.33.2 \ eslint-config-prettier@9.0.0 \
+      eslint-plugin-jsx-a11y@6.8.0
+    </p>
+    <p>
+      prettier: Formats our code automatically according to a defined code style
+    </p>
+    <p>eslint: Analyzes our code and enforces best practices</p>
+    <p>
+      eslint-config-react: Enables rules in ESLint relevant to React projects
+    </p>
+    <p>
+      eslint-config-prettier: Disables rules relating to code style in ESLint so
+    </p>
+    <p>that Prettier can handle them instead  eslint-plugin-jsx-a11y: Allows</p>
+    <p>to check for accessibility (a11y) issues in our JSX code</p>
+    <p class="node">
+      The --save-dev flag in npm saves those dependencies as dev dependencies,
+      which means that they will only be installed for development. They will
+      not be installed and included in a deployed app. This is important in
+      order to keep the size of our containers as small as possible later.
+    </p>
+    <p class="node">
+      .prettierrc.json dist/ The node_modules/ folder is automatically ignored
+      by Prettier
+    </p>
+    <p class="node">
+      ESLint focuses on the actual code, avoiding common mistakes or unnecessary
+      code, read page 14 of the book
+    </p>
+    <p class="node">npx eslint src in the Terminal to run the linter.</p>
+    <p class="node">npx eslint src --fix</p>
+    <p>
+      The npx command allows us to execute commands provided by npm packages, in
+      a similar context as running them in package.json scripts would do. It can
+      also run remote packages without installing them permanently. If the
+      package is not installed yet, it will ask you whether it should do this.
+    </p>
+    <p class="node">add a lint script to package.json</p>
+    <p class="node">npm pkg set scripts.lint="eslint src"</p>
+    <p class="node">
+      Now, run npm run lint in the Terminal. This should execute eslint src
+      successfully,just like npx eslint src did:
+    </p>
+    <p class="node">Setting up Husky to make sure we commit proper code</p>
+    <p class="node">
+      we can set up Husky and lint-staged, which run before we commit our code
+      to Git and ensure that Prettier and ESLint are executed successfully on
+      the source code before it is committed
+    </p>
+    <p class="node">npm install --save-dev husky@8.0.3 \ lint-staged@15.1.0</p>
+    <p class="node">
+      Add the husky install script to a prepare script in package.json, so that
+      Husky gets installed automatically when the project is cloned and npm
+      install is executed
+    </p>
+    <p class="node">npm pkg set scripts.prepare="husky install"</p>
+    <p class="node">
+      Since we do not need to run npm install again right now, we need to
+      manually run the prepare script this time: npm run prepare
+    </p>
+    <p class="node">
+      Add a pre-commit hook for lint-staged, so that ESLint and Prettier run
+      every time we do git commit: npx husky add .husky/pre-commit "npx
+      lint-staged"
+    </p>
+    <p>fix: For bug fixes</p>
+    <p>feat: For new features</p>
+    <p>
+      refactor: For restructuring the code without adding features or fixing
+      bugs
+    </p>
+    <p>build: For changes in the build system or dependencies</p>
+    <p>ci: For changes in the CI/CD configuration</p>
+    <p>docs: For changes in the documentation only</p>
+    <p>perf: For performance optimizations</p>
+    <p>For fixing code formatting</p>
+    <p>test: For adding or adjusting tests</p>
   </body>
 </html>
