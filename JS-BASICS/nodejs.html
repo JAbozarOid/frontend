@@ -5,115 +5,242 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>node js</title>
     <style>
-      p.node {
+      p.title {
         font-weight: bold;
+        font-size: 24px;
+        color: black;
+        text-indent: 1rem;
+        width: 900px;
+        font-family: "Times New Roman", Times, serif;
+        white-space: nowrap; /* Prevents text from wrapping to the next line */
       }
-      em {
+      p.description {
         font-weight: bold;
-        font-style: oblique;
+        color: blue;
+        font-size: 18px;
+        font-family: "Courier New", Courier, monospace;
+        text-indent: 3rem;
+        width: 900px;
+        white-space: nowrap; /* Prevents text from wrapping to the next line */
+      }
+      p.desc {
+        font-weight: lighter;
+        font-style: italic;
+        color: rgb(32, 3, 17);
+        font-size: 18px;
+        font-family: "Courier New", Courier, monospace;
+        text-indent: 3rem;
+        width: 900px;
+        white-space: nowrap; /* Prevents text from wrapping to the next line */
+      }
+      p.desc::before {
+        content: "- "; /* Add the dash before the text */
+        position: relative; /* Ensure relative positioning if needed */
+        color: red; /* Dash color */
+      }
+      p.description::before {
+        content: "- "; /* Add the dash before the text */
+        position: relative; /* Ensure relative positioning if needed */
+        color: red; /* Dash color */
+      }
+      .horizontal-line {
+        width: 100%; /* Adjust width as needed */
+        border-bottom: 2px solid black;
       }
     </style>
   </head>
   <body>
-    <p>Single thread in node can handle multiple requests</p>
-    <p>
+    <p class="desc">Single thread in node can handle multiple requests</p>
+    <p class="desc">
       In node every file is a module, variables and functions inside of that
       file are scope in that module. they are not available outside of that
       module
     </p>
-    <p>Event : A signal that something has happened</p>
-
-    <p class="node">requirement for vs code</p>
-    <p>Docker (by Microsoft)</p>
-    <p>ESLint (by Microsoft)</p>
-    <p>Prettier Code formatter (by Prettier)</p>
-    <p>MongoDB for VS Code (by MongoDB)</p>
-
-    <p class="node">setup a frontend project with react</p>
-    <p>$ npm create vite@5.0.0 .</p>
-    <p>framework react and variant is javascript</p>
-    <p>npm install</p>
-    <p>run npm run dev to start the dev server</p>
-
-    <p class="node">Installing the necessary dependencies</p>
-    <p>
+    <p class="desc">Event : A signal that something has happened</p>
+    <div class="horizontal-line"></div>
+    <p class="title">requirement for vs code</p>
+    <p class="description">Docker (by Microsoft)</p>
+    <p class="description">ESLint (by Microsoft)</p>
+    <p class="description">Prettier Code formatter (by Prettier)</p>
+    <p class="description">MongoDB for VS Code (by MongoDB)</p>
+    <div class="horizontal-line"></div>
+    <p class="title">setup a frontend project with react</p>
+    <p class="description">$ npm create vite@5.0.0 .</p>
+    <p class="description">framework react and variant is javascript</p>
+    <p class="description">npm install</p>
+    <p class="description">run npm run dev to start the dev server</p>
+    <div class="horizontal-line"></div>
+    <p class="title">Installing the necessary dependencies</p>
+    <p class="description">
       npm install --save-dev prettier@3.1.0 \ eslint@8.54.0 \
       eslint-plugin-react@7.33.2 \ eslint-config-prettier@9.0.0 \
       eslint-plugin-jsx-a11y@6.8.0
     </p>
-    <p>
+    <p class="description">
       prettier: Formats our code automatically according to a defined code style
     </p>
-    <p>eslint: Analyzes our code and enforces best practices</p>
-    <p>
+    <p class="description">
+      eslint: Analyzes our code and enforces best practices
+    </p>
+    <p class="description">
       eslint-config-react: Enables rules in ESLint relevant to React projects
     </p>
-    <p>
+    <p class="description">
       eslint-config-prettier: Disables rules relating to code style in ESLint so
+      that Prettier can handle them instead
     </p>
-    <p>that Prettier can handle them instead  eslint-plugin-jsx-a11y: Allows</p>
-    <p>to check for accessibility (a11y) issues in our JSX code</p>
-    <p class="node">
+    <p class="description">
+      eslint-plugin-jsx-a11y: Allows to check for accessibility (a11y) issues in
+      our JSX code
+    </p>
+    <div class="horizontal-line"></div>
+    <p class="desc">
       The --save-dev flag in npm saves those dependencies as dev dependencies,
       which means that they will only be installed for development. They will
       not be installed and included in a deployed app. This is important in
       order to keep the size of our containers as small as possible later.
     </p>
-    <p class="node">
+    <p class="desc">
       .prettierrc.json dist/ The node_modules/ folder is automatically ignored
       by Prettier
     </p>
-    <p class="node">
+    <p class="desc">
       ESLint focuses on the actual code, avoiding common mistakes or unnecessary
       code, read page 14 of the book
     </p>
-    <p class="node">npx eslint src in the Terminal to run the linter.</p>
-    <p class="node">npx eslint src --fix</p>
-    <p>
+    <p class="desc">npx eslint src in the Terminal to run the linter.</p>
+    <p class="desc">npx eslint src --fix</p>
+    <p class="desc">
       The npx command allows us to execute commands provided by npm packages, in
       a similar context as running them in package.json scripts would do. It can
       also run remote packages without installing them permanently. If the
       package is not installed yet, it will ask you whether it should do this.
     </p>
-    <p class="node">add a lint script to package.json</p>
-    <p class="node">npm pkg set scripts.lint="eslint src"</p>
-    <p class="node">
+    <p class="desc">add a lint script to package.json</p>
+    <p class="desc">npm pkg set scripts.lint="eslint src"</p>
+    <p class="desc">
       Now, run npm run lint in the Terminal. This should execute eslint src
       successfully,just like npx eslint src did:
     </p>
-    <p class="node">Setting up Husky to make sure we commit proper code</p>
-    <p class="node">
+    <div class="horizontal-line"></div>
+    <p class="title">Setting up Husky to make sure we commit proper code</p>
+    <p class="description">
       we can set up Husky and lint-staged, which run before we commit our code
       to Git and ensure that Prettier and ESLint are executed successfully on
       the source code before it is committed
     </p>
-    <p class="node">npm install --save-dev husky@8.0.3 \ lint-staged@15.1.0</p>
-    <p class="node">
+    <p class="description">
+      npm install --save-dev husky@8.0.3 \ lint-staged@15.1.0
+    </p>
+    <p class="description">
       Add the husky install script to a prepare script in package.json, so that
       Husky gets installed automatically when the project is cloned and npm
       install is executed
     </p>
-    <p class="node">npm pkg set scripts.prepare="husky install"</p>
-    <p class="node">
+    <p class="description">npm pkg set scripts.prepare="husky install"</p>
+    <p class="description">
       Since we do not need to run npm install again right now, we need to
       manually run the prepare script this time: npm run prepare
     </p>
-    <p class="node">
+    <p class="description">
       Add a pre-commit hook for lint-staged, so that ESLint and Prettier run
       every time we do git commit: npx husky add .husky/pre-commit "npx
       lint-staged"
     </p>
-    <p>fix: For bug fixes</p>
-    <p>feat: For new features</p>
-    <p>
+    <div class="horizontal-line"></div>
+    <p class="desc">fix: For bug fixes</p>
+    <p class="desc">feat: For new features</p>
+    <p class="desc">
       refactor: For restructuring the code without adding features or fixing
       bugs
     </p>
-    <p>build: For changes in the build system or dependencies</p>
-    <p>ci: For changes in the CI/CD configuration</p>
-    <p>docs: For changes in the documentation only</p>
-    <p>perf: For performance optimizations</p>
-    <p>For fixing code formatting</p>
-    <p>test: For adding or adjusting tests</p>
+    <p class="desc">build: For changes in the build system or dependencies</p>
+    <p class="desc">ci: For changes in the CI/CD configuration</p>
+    <p class="desc">docs: For changes in the documentation only</p>
+    <p class="desc">perf: For performance optimizations</p>
+    <p class="desc">For fixing code formatting</p>
+    <p class="desc">test: For adding or adjusting tests</p>
+    <div class="horizontal-line"></div>
+    <p class="title">
+      Similarities and differences between JavaScript in the browser and in
+      Node.js
+    </p>
+    <img src="./images/node.png" />
+    <p class="description">
+      The default behavior in Node.js is to run everything asynchronously,
+    </p>
+    <p class="description">
+      in Node.js, libuv is responsible for assigning threads for I/O operations
+      while giving us, as a programmer, access to a single runtime thread to
+      write our code in.
+    </p>
+
+    <p class="description">
+      However, this does not mean that each connection to our backend will
+      create a new thread. Threads are created on the fly when advantageous. As
+      a developer, we do not have to deal with multi-threading and can focus on
+      developing with asynchronous code and callbacks.
+    </p>
+    <p class="description">
+      If code is synchronous, it is executed directly by putting it on the call
+      stack. If code is asynchronous, the operation is started, and the instance
+      of that operation is stored in a queue, together with a callback function
+    </p>
+    <p class="description">
+      The Node.js runtime will first execute all code left in the stack
+    </p>
+    <div class="horizontal-line"></div>
+    <p class="title">
+      The following diagram visualizes the difference between multi-threaded
+      servers and a Node.js server:
+    </p>
+    <img src="./images/nodeserver.png" />
+    <div class="horizontal-line"></div>
+    <p class="title">Introducing Docker, a platform for containers</p>
+    <p class="description">
+      The Docker platform essentially consists of three parts:
+    </p>
+    <p class="description">
+      Docker Client: Can run commands by sending them to the Docker daemon,
+      which is either running on the local machine or a remote environment.
+    </p>
+    <p class="description">
+      Docker Host: Contains the Docker daemon, images, and containers
+    </p>
+    <p class="description">
+      Docker Registry: Hosts and stores docker images, extensions, and plugins.
+      By default, the public registry Docker Hub will be used to search for
+      images.
+    </p>
+    <img src="./images/docker.png" />
+    <p class="description">
+      Docker images can be thought of as read-only templates and are used to
+      create containers
+    </p>
+    <p class="description">Docker containers are instances of images.</p>
+    <p class="title">Installing docker</p>
+    <p class="description">
+      The easiest way to set up the Docker platform for local development is
+      using Docker Desktop
+    </p>
+    <p class="description">
+      <a href="https://www.docker.com/products/docker-desktop/" target="_blank">
+        Docker Desktop download</a
+      >
+    </p>
+    <p class="description">
+      Creating a container : docker run -i -t ubuntu:24.04 /bin/bash
+    </p>
+    <p class="description">
+      by executing the following command to see which operating system is
+      running: uname -a
+    </p>
+    <p class="description">
+      If you get a version number that ends with -linuxkit, you have
+      successfully run a command in the container
+    </p>
+    <p class="description">
+      You can now type the following command to exit: exit
+    </p>
   </body>
 </html>
