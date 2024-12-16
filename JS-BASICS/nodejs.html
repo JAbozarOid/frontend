@@ -23,6 +23,15 @@
         width: 900px;
         white-space: nowrap; /* Prevents text from wrapping to the next line */
       }
+      p.subDescription {
+        font-weight: bold;
+        color: blue;
+        font-size: 18px;
+        font-family: "Courier New", Courier, monospace;
+        text-indent: 4rem;
+        width: 900px;
+        white-space: nowrap;
+      }
       p.desc {
         font-weight: lighter;
         font-style: italic;
@@ -43,6 +52,7 @@
         position: relative; /* Ensure relative positioning if needed */
         color: red; /* Dash color */
       }
+
       .horizontal-line {
         width: 100%; /* Adjust width as needed */
         border-bottom: 2px solid black;
@@ -242,5 +252,59 @@
     <p class="description">
       You can now type the following command to exit: exit
     </p>
+    <div class="horizontal-line"></div>
+    <p class="title">Introducing MongoDB, a document database</p>
+    <p class="description">
+      NoSQL means that the database specifically does not use SQL to query the
+      database
+    </p>
+    <p class="description">
+      NoSQL databases have various other ways to query the database and often
+      have a vastly different structure of how data is stored and queried.
+    </p>
+    <img src="./images/nosqldb.png" />
+    <p class="description">
+      MongoDB is a document-based database, which means that each entry in the
+      database is stored as a document
+    </p>
+    <p class="description">
+      In MongoDB, these documents are basically JSON objects
+    </p>
+    <img src="./images/comparedb.png" />
+    <p class="title">Setting up a MongoDB server</p>
+    <p class="description">
+      1 Make sure Docker Desktop is running and Docker is started: docker ps
+    </p>
+    <p class="description">
+      2 Run the following Docker command to create a new container with a
+      MongoDB server
+    </p>
+    <p class="subDescription">
+      docker run -d --name dbserver -p 27017:27017 --restart unless-stopped
+      mongo:6.0.4
+    </p>
+    <p class="subDescription">
+      -d: Runs the container in the background (daemon mode).
+    </p>
+    <p class="subDescription">
+      -p: we map the default MongoDB server port 27017 in the container to the
+      same port on our host
+    </p>
+    <p class="subDescription">
+      --restart unless-stopped: This ensures that every time we start Docker,
+      our MongoDB server will already be running.
+    </p>
+    <p class="description">
+      3
+      <a href="https://www.mongodb.com/try/download/shell">
+        Install the MongoDB Shell on your host system : Mongosh
+      </a>
+    </p>
+    <p class="description">
+      4 On your host system, run the following command to connect to the MongoDB
+      server using the MongoDB Shell (mongosh).
+    </p>
+    <p class="subDescription">mongosh mongodb://localhost:27017/ch2</p>
+    <p class="subDescription">We are going to call our database ch2:</p>
   </body>
 </html>
