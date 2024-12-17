@@ -28,7 +28,7 @@
         color: blue;
         font-size: 18px;
         font-family: "Courier New", Courier, monospace;
-        text-indent: 4rem;
+        text-indent: 5rem;
         width: 900px;
         white-space: nowrap;
       }
@@ -52,7 +52,11 @@
         position: relative; /* Ensure relative positioning if needed */
         color: red; /* Dash color */
       }
-
+      p.subDescription::before {
+        content: "• "; /* Add the dash before the text */
+        position: relative; /* Ensure relative positioning if needed */
+        color: blue; /* Dash color */
+      }
       .horizontal-line {
         width: 100%; /* Adjust width as needed */
         border-bottom: 2px solid black;
@@ -297,7 +301,8 @@
     <p class="description">
       3
       <a href="https://www.mongodb.com/try/download/shell">
-        Install the MongoDB Shell on your host system : Mongosh
+        Install the MongoDB Shell on your host system : Mongosh (access MongoDB
+        using the MongoDB Shell)
       </a>
     </p>
     <p class="description">
@@ -307,5 +312,70 @@
     <p class="subDescription">mongosh mongodb://localhost:27017/ch2</p>
     <p class="subDescription">We are going to call our database ch2:</p>
     <p class="title">Running commands directly on the database</p>
+    <p class="description">
+      Collections in MongoDB are the equivalent of tables in relational
+      databases. They store documents,which are like JSON objects
+    </p>
+    <p class="description">insert({})</p>
+    <p class="subDescription">
+      db.users.insertOne({ username: 'dan', fullName: 'Daniel Bugl', age: 26 })
+    </p>
+    <p class="subDescription">
+      insertOne() allows us to insert a single document into the collection,
+      there is also an insertMany() method, where we can pass an array of
+      documents to add to the collection
+    </p>
+    <p class="description">insertMany([{}])</p>
+    <p class="subDescription">
+      db.users.insertMany([ { username: 'jane', fullName: 'Jane Doe', age: 32 },
+      { username: 'john', fullName: 'John Doe', age: 30 } ])
+    </p>
+    <p class="description">find()</p>
+    <p class="subDescription">db.users.find()</p>
+    <p class="description">
+      MongoDB automatically created a unique ID (ObjectId) for our document.
+      This ID consists of 12 bytes in hexadecimal format
+    </p>
+    <p class="subDescription">The first 4 bytes are a timestamp</p>
+    <p class="subDescription">The first 4 bytes are a timestamp</p>
+    <p class="subDescription">
+      The last 3 bytes are a randomly initialized incrementing counter
+    </p>
+    <p class="description">findOne({})</p>
+    <p class="subDescription">db.users.findOne({ username: 'jane' })</p>
+    <p class="description">sort({})</p>
+    <p class="subDescription">db.users.find().sort({ age: 1 })</p>
+    <p class="subDescription">1 for ascending, -1 for descending</p>
+    <p class="description">updateOne({})</p>
+    <p class="subDescription">
+      db.users.updateOne({_id: ObjectId('676130b5d90c8e550b79a1b7')},{$set: {age
+      : '28'}})
+    </p>
+    <p class="subDescription">
+      The updateOne method accepts a third argument, which is an options object.
+      One useful option here is the upsert option, which, if set to true, will
+      insert a document if it does not exist yet, and update it if it does exist
+      already.
+    </p>
+    <p class="description">deleteOne({})</p>
+    <p class="subDescription">db.users.deleteOne({ username: 'new' })</p>
+    <p class="description">operators</p>
+    <p class="subDescription">$gt: means greater than</p>
+    <p class="subDescription">$gte: means greater than or equal</p>
+    <p class="subDescription">
+      $unset: If you want to remove a field from a document
+    </p>
+    <p class="subDescription">$set: If you want to add a field to a document</p>
+    <p class="title">Accessing the database via VS Code</p>
+    <p class="description">
+      1 Click on the MongoDB icon on the left sidebar (it should be a leaf icon)
+      and click on the Add Connection button
+    </p>
+    <p class="description">
+      2 click on Connect in the Connect with Connection String box
+    </p>
+    <p class="description">3 mongodb://localhost:27017/</p>
+    <p class="title">Accessing the MongoDB database via Node.js</p>
+    <p class="description">npm install mongodb@6.3.0</p>
   </body>
 </html>
