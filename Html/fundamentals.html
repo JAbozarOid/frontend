@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="section-css">headline 1</h1>
+    <!--each html page can have only one h1 tag
+    but we can have many h2 to h6
+    if we have many h1 tag google score less-->
+
+    <p>This is a paragraph in the practice page.</p>
+
+    <!--tag link : go to another page-->
+    <a href="./hello.htm"> go to hello page </a>
+    <br/>
+    <image src="./images/ar.jpg" alt="Abozar Photo" /><!-- alt is important for seo and accessibility-->
+    <br/>
+
+    <!--we can combine tag with image : with the help of this there will be a clickable mouse on imge-->
+    <a href="./images/ar.jpg">
+        <image src="./images/ar.jpg" alt="Abozar Photo" /></a>
+    <br/>    
+
+    <!--It allows you to embed another HTML document (a web page or resource) inside the current web page-->
+    <!--iframe is inline element : it reserve the area base on the wrap-content of it-->
+    <iframe src="https://yjc.ir" width="300" height="200" title="Example Iframe"></iframe> 
+    <br/>
+    
+    <a href="https://www.google.com" target="_blank"> go to google site with target _blank </a><!-- open in new tab-->
+    <br/>
+    <a href="https://www.google.com" target="_parent"> go to google site with target _parent </a><!-- open in the same tab-->
+    <br/>
+    <a href="https://www.google.com" target="_self"> go to google site  with target _self </a><!-- open in the same tab-->
+    <br/>   
+    <a href="https://www.google.com" target="_top"> go to google site with target _top </a><!-- open in the same tab-->
+    <br/> 
+    
+    <!-- _parent / _self / _top : But their difference becomes clear when iframes or nested browsing contexts are involved-->
+    <!-- iframe inside iframe : _self load in the same iframe , _parent load in the parent iframe , _top load in the main page-->
+     <iframe src="http://localhost:5500/HTML/fundamentals.html" width="300" height="200" title="Example Iframe">
+        <a href="https://yjc.ir" target="_parent"> go to young journalist club </a>   
+     </iframe>
+     <br/>  
+
+     <!-- text formatting tags-->
+     <b>this the abbreviation for bold</b>
+     <br/>   
+     <strong> this is for strong importance</strong><!-- both bold the text but strong has semantic meaning for seo-->
+     <br />
+     <emph> this is for emphasize </emph><!-- italicize the text with semantic meaning for seo-->
+     <br/>  
+     <i> this is for italic </i><!-- just italicize the text-->
+        <br/>   
+        <mark> this is for mark </mark><!-- highlight the text-->
+    
+    <br/>  
+    <small> this is for small text </small>
+    <br/>  
+    <del> this is for deleted text </del><!-- strike through the text-->        
+    <br/>  
+    <ins> this is for inserted text </ins><!-- underline the text-->    
+    <br/>
+    
+    <blockquote>
+        this is for blockquote
+        <br/>
+        used for quoting large section of text from another source  
+    </blockquote>
+    <br/>
+    <q> this is for short inline quotation </q>
+    <br/>   
+    <abbr title="abbreviation"> this is for abbreviation </abbr>
+    <address>
+        this is for address tag
+        <br/>
+        it usually contains contact information like email , phone number , physical address
+    </address>
+    <!-- the address tag is usually displayed in italic by default and search engine optimization by google-->
+    <br/>
+    
+    <cite>
+        this is for sitemap tag
+        <br/>
+        it is used to provide information about the structure of a website to search engines and web crawlers       
+    </cite>
+    <br/>   
+    
+    <!--for commenting, put curser on the line wants to commnet and press ctrl+k+c-->
+
+    <!--Lists : are block elements -->
+    <h2> Unordered List </h2>
+    <ul>        
+        <li> first item </li>
+        <li> second item </li>
+        <li> third item </li>
+    </ul>   
+    <h2> Ordered List </h2>
+    <ol>        
+        <li> first item </li>
+        <li> second item </li>
+        <li> third item </li>   
+    </ol>
+
+    <!--block elements : reserve the area with match-parent of the element-->
+    <div style="background-color: lightgray; padding: 10px;">
+        This is a block element using &lt;div&gt; tag.
+        <p> It can contain other block elements and inline elements.</p>
+    </div>
+    <br/>   
+
+    <!--inline elements : reserve the area with warp-content of the element-->
+    <span style="color: blue; font-weight: bold;"><!--span is important tag-->
+        This is an inline element using &lt;span&gt; tag.       
+    </span>
+    <br/>   
+
+    <!--tables-->
+    <h2> Simple Table </h2>
+    <table border="1">  
+        <tr>
+            <th colspan="4"> Header 1 </th><!-- colspan : to merge the header cells-->
+            <th> Header 2 </th>
+            <th> Header 3 </th><!-- th : table header-->
+        </tr>
+        <tr>
+            <td> Row 1, Cell 1 </td><!-- td : table data-->
+            <td> Row 1, Cell 2 </td>
+            <td> Row 1, Cell 3 </td>
+        </tr>
+        <tr>
+            <td> Row 2, Cell 1 </td>
+            <td> Row 2, Cell 2 </td>
+            <td> Row 2, Cell 3 </td>
+        </tr>   
+    </table>
+
+    <!--semantic elements(meaningful) : the elements we know what is the purpose of that element for example <p> is a semantic,
+         it's for paragraph-->
+
+    <!--non semantic : the elements we don't know what is the purpose of that element for example <span> is a nonesemantic-->
+    
+   <aside>
+        this is for aside tag
+        <br/>
+        it is used to represent content that is tangentially related to the content around it, such as sidebars, pull quotes, or advertisements
+    </aside>
+    <br/>   
+
+    <nav>
+        this is for nav tag
+        <br/>
+        it is used to define a section of a page that contains navigation links, such as menus, tables of contents, or indexes
+    </nav>
+    <br/>    
+    
+    <!--forms in html-->
+    <h2> Simple Form </h2>
+    <form action="/submit" method="post">
+        <label for="name"> Name: </label><!-- for attribute link the label to the input field : click on label will input focused-->
+        <input type="text" id="name" name="name" required/><!--id : for finding that element and is unique-->
+        <br/>
+        <label for="email"> Email: </label>
+        <input type="email" id="email" name="email" required />
+        <br/>
+        <input type="checkbox" id="subscribe" name="subscribe" />
+        <label for="subscribe"> Subscribe to newsletter </label>
+        <br/>
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male"> Male </label>    
+        <input type="radio" id="female" name="gender" value=" female" />
+        <label for="female"> Female </label>
+        <br/>   
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+        <br/>
+        <select id="country" name="country" size="1" multiple><!-- size : number of visible options , multiple : allow multiple selection-->    
+            <option value="usa"> USA </option>
+            <option value="canada" selected> Canada </option>
+            <option value="uk"> UK </option>
+        </select>
+        <br/>
+        <textarea id="message" name="message" rows="4" cols="30" placeholder="Enter your message here..."></textarea>
+        <br/>   
+        <button type="reset"> Reset </button>   
+        <input type="submit" value="Submit" />
+    </form>
+
+    <form>
+        <label for="search"> Search: </label>
+        <input type="search" id="search" name="search" placeholder="Search..." value="abc@gmail.com"/><!--value : default value of the input field-->
+        <label for="disabledText"> Disabled Text: </label>
+        <input type="text" id="disabledText" name="disabledText" placeholder="diasable text..." disabled/>
+        <br/>
+        <!-- disabled : user cannot interact with the input field , readonly : user can interact but cannot change the value--> 
+        <label for="quantity"> Step: </label>
+        <input type="number" id="quantity" name="quantity" min="1" max="10" step="1" value="1"/><!-- min , max , step attributes-->
+        <br/>
+        <label for="nationalCode"> National Code: </label>
+        <input type="number" id="nationalCode" name="nationalCode" autocomplete autofocus pattern="(?!^(\d)\1{9}$)\d{10}" maxlength="10" placeholder="write you national code" required/><!-- maxlength : maximum number of characters allowed-->
+        <!--pattern : we can set regex for input, for example the above input can have the regex of national code-->
+        <br/>
+        
+
+        <button type="submit"> Go </button>
+    </form>
+
+
+
+    
+
+
+
+    
+
+
+
+
+</body>
+</html>
