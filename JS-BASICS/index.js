@@ -33,8 +33,7 @@ let phoneNumber = null;
 
 // object type : key and value pairs
 let person = {
-    fname : 'Abozar',
-    age: 30
+    fname: 'Abozar', age: 30
 };
 // access to object property
 // 1- dot notation
@@ -44,7 +43,7 @@ person.age = 31;
 
 
 // array
-let selectedColors = ['red','blue']; 
+let selectedColors = ['red', 'blue'];
 selectedColors[2] = 'green' // put at the index 2 the green value
 selectedColors[3] = 1 // strings and number
 console.log(selectedColors);
