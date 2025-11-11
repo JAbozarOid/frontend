@@ -1,0 +1,23 @@
+p {
+    background: #0d6efd;
+}
+
+h1 {
+    background: #0c4128;
+    color: #fff;
+}
+
+#lorem2 {
+    background: #5b1312;
+}
+#name {
+    background: #20c997;
+}
+#family {
+    background: #000000;
+    color: #fff;
+}
+
+.paragraph {
+    background: #d63384;
+}
