@@ -1,0 +1,43 @@
+/**
+for every page the three below always are
+ */
+* {
+    /*reset*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: "Vazirmatn";
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 200;
+    color: #0d6efd;
+    text-align: center;
+    display: block;
+}
+.description {
+    font-size: 30px;
+    font-weight: 200;
+    color: #d63384;
+    text-align: justify;
+    display: block;
+    margin: 10px;
+    line-height: 50px;
+}
+
+.number {
+    font-size: 30px;
+    font-weight: 300;
+    color: #146c43;
+    text-align: center;
+    text-decoration: line-through;
+}
+
+a {
+    text-decoration: none;
+
+}
