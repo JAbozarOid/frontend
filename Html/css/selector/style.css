@@ -10,9 +10,11 @@ h1 {
 #lorem2 {
     background: #5b1312;
 }
+
 #name {
     background: #20c997;
 }
+
 #family {
     background: #000000;
     color: #fff;
@@ -20,4 +22,49 @@ h1 {
 
 .paragraph {
     background: #d63384;
+}
+
+div div div h2 {
+    color: #d63384;
+}
+
+div div div h2.headline {
+    color: #1a1e21;
+    font-weight: bold;
+    background: #0d6efd;
+}
+
+div > p.directChild {
+    background: #20c997;
+}
+
+input[type='text'] {
+    border: 1px solid #0d6efd;
+}
+
+
+div[data-id='div1'] {
+    border: 10px solid #d63384;
+    background: #3dd5f3;
+}
+div[data-id='div2'] {
+    border: 1px solid #1a1e21;
+}
+
+a:link {
+    color: #0d6efd;
+}
+a:visited {
+    color: #d63384;
+}
+a:hover {
+    color: #1a1e21;
+}
+
+div h3:nth-child(2) {
+    color: #d63384;
+}
+
+.div4 h4:not(:last-child) {
+    border-bottom: 2px solid #0d6efd;
 }

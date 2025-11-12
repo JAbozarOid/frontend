@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="./style.css"/>
 </head>
 <body>
-<p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut commodi corporis facilis quasi, temporibus vitae?
+<p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut commodi corporis facilis quasi,
+    temporibus vitae?
     Ad aliquid aperiam culpa dolores dolorum eligendi facere labore magnam minus molestias, mollitia nemo neque nostrum
     possimus quibusdam repellendus sapiente soluta tempora temporibus vel. Aspernatur distinctio harum officia placeat
     quas quasi ut! Animi commodi, eius inventore ipsa libero minima nisi tempora? Ab ad adipisci aspernatur aut
@@ -36,5 +37,64 @@
 <p class="paragraph"> <!-- class can be assign to different tags-->
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur aut blanditiis
 </p>
+<br/>
+<div>
+    <div class="div">
+        <div class="div">
+            <h2> combinator selector</h2>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="div">
+        <div class="div">
+            <h2 class="headline"> combinator selector with class</h2>
+        </div>
+    </div>
+</div>
+
+<!-- direct child selector-->
+<div class="div">
+    <p class="directChild">access to direct child from selector</p>
+    <div class="div">
+        <p>another child with different parent</p>
+    </div>
+</div>
+<br/>
+
+<label for="email"></label><input type="text" name="email" id="email" placeholder="email"/>
+<label for="password"></label><input type="password" name="password" id="password" pattern=".{6,}"
+                                     placeholder="password"/>
+<br/>
+
+<div class="div">
+    <p>new paragraph</p>
+</div>
+
+<!-- custom attribute always start with : data-     -->
+<div data-id="div1">
+    <p>custom attribute </p>
+</div>
+<div data-id="div2">
+    <p>new paragraph</p>
+</div>
+
+<!-- pseudo class (::) and element (:) -->
+<div>
+    <a href="https://www.google.com">go to google site</a>
+</div>
+
+<div>
+    <div>
+        <h3> headline 3</h3>
+    </div>
+</div>
+
+<div class="div4">
+    <h4>headline 2</h4>
+    <h4>headline 3</h4>
+    <h4>headline 4</h4>
+    <h4>headline 5</h4>
+</div>
 </body>
 </html>
