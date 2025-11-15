@@ -1,0 +1,17 @@
+{
+  "name": "node-config",
+  "version": "1.0.0",
+  "description": "setup-node-package-json",
+  "main": "app.js",
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "author": "abozar raghibdoust",
+  "license": "ISC",
+  "dependencies": {
+    "loadash": "^1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
