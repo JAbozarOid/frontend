@@ -1,7 +1,7 @@
 import FunctionComponent from "./componets/FunctionComponent.jsx";
 import CounterClass from "./componets/ClassComponent.jsx";
 import Counter from "./componets/Counter.jsx";
-import {useState} from "react";
+import {useEffectEvent, useState} from "react";
 
 const people = ["abozar", "elham", "hamid"]
 
@@ -43,12 +43,15 @@ const App = () => {
 
         setState(newState)
     }
+
+
+
     return (
         // <FunctionComponent/>
         // <CounterClass/>
         <div>
             {/*<Counter isActive = {true} onClick = {() =>{}} name={"Abozar"} counter = {0} />*/}
-            {/*<Counter/>*/}
+            <Counter/>
             {/*<Counter/>*/}
             {/*<Counter/>*/}
 
