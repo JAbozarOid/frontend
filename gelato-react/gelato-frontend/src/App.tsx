@@ -1,8 +1,12 @@
+import {Layout} from "./components/layout";
+
 function App() {
 
   return (
-    <div className="bg-red-100">
-        <h1>جلاتو هوس</h1>
+    <div className="bg-red-200">
+        <Layout>
+            <>Hello World!</>
+        </Layout>
     </div>
   )
 }
