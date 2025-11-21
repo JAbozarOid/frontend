@@ -15,6 +15,7 @@ setup project with vite
   - add postcss to project --> convert all css we use in our project to old css(backward)
   - npm install tailwindcss @tailwindcss/postcss postcss
   - Add @tailwindcss/postcss to your postcss.config.mjs
+- vercel.com
 ## 
 
 
