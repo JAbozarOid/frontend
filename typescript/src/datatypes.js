@@ -50,4 +50,12 @@ function unionFunction(x) {
     console.log(x);
 }
 unionFunction(10);
-console.log(sales, firstname, isActive, digits, lastnames, "persion1 : ", person1, "person 2 : ", person2, Size.Small, Size.Medium, Size.Large, "calculate tax with default value", calculateTax(10000), "\n", "calculate tax with 0.3", calculateTax(10000, 0.3), "\n", "employee 1 name is : ", "".concat(employee1.name), "\n", "weight is", "".concat(weight), "\n", Role.Admin);
+unionFunction("10");
+//union array
+var arr = [1, "abozar"];
+//literal types --> we need to limited the value for the specific type
+var selectedColors;
+selectedColors = "blue";
+var secondSelectedColors;
+secondSelectedColors = "orange";
+console.log(sales, firstname, isActive, digits, lastnames, "persion1 : ", person1, "person 2 : ", person2, Size.Small, Size.Medium, Size.Large, "calculate tax with default value", calculateTax(10000), "\n", "calculate tax with 0.3", calculateTax(10000, 0.3), "\n", "employee 1 name is : ", "".concat(employee1.name), "\n", "weight is", "".concat(weight), "\n", "arr is", "".concat(arr), "\n", "literal types", "".concat(selectedColors), "\n", "literal types", "".concat(secondSelectedColors), "\n", Role.Admin);

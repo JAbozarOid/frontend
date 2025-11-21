@@ -76,10 +76,23 @@ unionFunction("10")
 //union array
 let arr : (number | string)[] = [1,"abozar"]
 
+//literal types --> we need to limited the value for the specific type
+let selectedColors : "blue" | "green" | "red" | "orange" | "yellow"
+selectedColors = "blue"
+// selectedColors = "black" --> we have error here because black is not defined as accepted value
+
+//or
+type SupportedColors = "blue" | "green" | "red" | "orange" | "yellow"
+let secondSelectedColors : SupportedColors
+secondSelectedColors = "orange"
+
 console.log(sales, firstname, isActive, digits, lastnames, "persion1 : ", person1, "person 2 : ", person2, Size.Small, Size.Medium, Size.Large,
     "calculate tax with default value", calculateTax(10000),"\n",
     "calculate tax with 0.3", calculateTax(10000, 0.3),"\n",
     "employee 1 name is : ",`${employee1.name}`,"\n",
     "weight is", `${weight}`,"\n",
+    "arr is", `${arr}`,"\n",
+    "literal types", `${selectedColors}`,"\n",
+    "literal types", `${secondSelectedColors}`,"\n",
     Role.Admin
 )
