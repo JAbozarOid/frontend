@@ -9,15 +9,18 @@ type ButtonProps = {
     variant?: "contained" | "outlined" | "text"
 } & React.PropsWithChildren & React.ButtonHTMLAttributes<HTMLButtonElement>
 
+// Define the type for the inner factory functions
+type ButtonVariantComponent = (props: Omit<ButtonProps, "variant">) => JSX.Element;
+
 // hash table --> we can use with the key of that properties to that element (o1)
 // {...props} --> spread operator --> everything inside of props use it
-const ButtonFactory = {
+const ButtonFactory : Record<NonNullable<ButtonProps["variant"]>, ButtonVariantComponent> = {
     contained: ({children, ...rest}) => (
         <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded-3xl"{...rest}>{children}</button>),
-    outlined: (props) => (<button
-        className="bg-transparent text-blue-700 font-semibold py-2 px-4 border border-blue-500"{...props}>outlined</button>),
-    text: (props) => (<button
-        className="bg-white text-gray-800 font-semibold py-2 px-4 border border-gray-400"{...props}>text</button>)
+    outlined: ({children, ...rest}) => (<button
+        className="bg-transparent text-blue-700 font-semibold py-2 px-4 border border-blue-500"{...rest}>{children}</button>),
+    text: ({children, ...rest}) => (<button
+        className="bg-white text-gray-800 font-semibold py-2 px-4 border  border-gray-400"{...rest}>{children}</button>)
 }
 
 
