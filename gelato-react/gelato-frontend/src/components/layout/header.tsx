@@ -5,8 +5,10 @@ export const Header: React.FC = () => {
 
     return (
         <header>
-            <Button variant={"contained"}>
-                contained
+            <Button variant={"contained"} onClick={() => {
+                console.log("clicked");
+            }}>
+                کلیک کن
             </Button>
             <Button variant={"outlined"}>
                 outlined
