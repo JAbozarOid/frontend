@@ -31,6 +31,32 @@
     <p>
       best practice to use script is at the end of the <em>body section</em>
     </p>
+    <p>
+        In general, there are two ways to export modules in JavaScript:
+    </p>
+    <ol>
+        <li>Using default exports : default exports, you can export as many items from any JavaScript file as you want </li>
+        <li>Using named exports : Named exports are a way to export only certain parts of a given JavaScript file.</li>
+    </ol>
+    <p>
+        <b>export default</b> function addTwo(a, b) {
+        console.log(a + b);
+        }
+    </p>
+    <p>
+        function addTwo(a, b) {
+        console.log(a + b);
+        }
+    </p>
+    <p>
+        function addThree(a, b, c) {
+        console.log(a + b + c);
+        }
+    </p>
+    <p>export { addTwo, addThree }; <b>Using named exports</b> </p>
+
+    <p><b>import module</b> import addTwo from "./addTwo"; <b>which was exported by export default</b></p>
+    <p><b>import module</b> import { addTwo } from "./addTwo"; <b>which was exported by named exports</b></p>
 
     <script src="index.js">
       // we can reference to javascript file index.js with "src"

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>React Basics</title>
+</head>
+<body>
+<div id="root">
+    <p>React uses the virtual DOM to update the browser Dom only when needed.</p>
+    <p>This ensures that the update is as minimal as possible, increasing the application speed and performance. </p>
+    <p>html tags inside of React component Function are not really HTML, they are JSX </p>
+    <p><b>JSX</b> allows to write javascript code inside html tags (JSX is combined HTML and JavaScript) </p>
+    <p>All Components in React Must be Capitalized name : Button.jsx (it lead to different html files with React
+        Compomnent files) </p>
+    <p><b>Transpiling</b> : as a process of converting JSX to HTML ( A browser cannot understand JSX syntax.)</p>
+    <p>old browser to understand the ES6 code, the only way to do it is by transpiling it.</p>
+    <p>create React app Project : npm init react-app . ("." means inside of this folder) </p>
+    <p><b>Babel</b> : is a JavaScript Compiler</p>
+    <p><b>Babel</b> : it allows you to transpile JSX code (which cannot be understood by a browser) into plain
+        JavaScript code (which can be understood by a browser)</p>
+    <p><b>Props :</b> properties in React component functions, like passing parameters to a javascript function</p>
+    <p><b>Props :</b> passing data between components</p>
+    <p><b>Props :</b> the component send props is parent and the component receive props is child</p>
+    <p><b>Props : traspile JSX --> </b> function App() {
+          return React.createElement(
+            "div",
+            {},
+        React.createElement("h1", {}, "Hello there") // {} --> is props
+          );
+        }</p>
+    <p><b>JavaScript Object :</b> an object is a special type of variable that can contain many values</p>
+    <p><b>JavaScript Object :</b> use objects when you need to store groups of related data of different types. Each data type is known as an object property</p>
+    <p><b>JSX : "h1 className="-----" and HTML : "h1 class="----"</b></p>
+    <p><b>JSX : "onClick" and HTML : "onclick"</b></p>
+    <p><b>Hooks : </b> Hooks are functions that were introduced in React version 16.8. They let you hook into React state and lifestyle features from components</p>
+    <p><b>Hooks : useState()</b>This hook is used to manage the state within a component and keep track of it and it's built directly into React.</p>
+    <p><b>Hooks : useState()</b>It creates a state variable with an initial value </p>
+    <p><b>Hooks : </b>You can only call hooks at the top level of your component or your own hooks. </p>
+    <p><b>Hooks : </b>You cannot call hooks inside loops or conditions. </p>
+    <p><b>Hooks : </b>You can only call hooks from React functions, and not regular JavaScript functions. </p>
+    <p><b>Hooks : </b>useContext, useMemo, useRef</p>
+    <p><b>Hooks : Custom Hooks </b>When you need to share logic and reuse the same logic across several components, you can extract the logic into a custom hook. </p>
+    <p><b>Hooks : Custom Hooks </b>Custom hooks offer flexibility and can be used for a wide range of use-cases such as form handling, animation, timers, and many more. </p>
+    <p><b>Hooks : useRef() </b>We use the useRef hook to access a child element directly.When you invoke the useRef hook, it will return a ref object. The ref object has a property named current. </p>
+    <p><b>lifting up state </b> moving the state from the child component to the parent component </p>
+    <p><b>negative result of lifting up state in a React app </b> prop drilling </p>
+    <p><b>When lifting state up, you need to move the useState from a child component to a parent component</b> </p>
+    <p><b>The process of lifting up state can lead to</b> a stateless component becoming a stateful component</p>
+    <p><b>Context Api</b> avoid having to pass state down through multiple levels of components</p>
+</div>
+
+</body>
+</html>

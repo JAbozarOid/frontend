@@ -1,5 +1,5 @@
 /**
-for every page the three below always are
+for every page
  */
 * {
     /*reset*/
@@ -8,8 +8,22 @@ for every page the three below always are
     padding: 0;
 }
 
+/**
+for every page
+ */
+a {
+    text-decoration: none;
+}
+
+/**
+for every page
+ */
+ul,ol {
+    list-style: none;
+}
+
 html, body {
-    font-family: "Vazirmatn";
+    font-family: "Vazirmatn", sans-serif; /* if vazirmatn with any reason could not load, second option load --> fallback*/
 }
 
 .title {
