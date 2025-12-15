@@ -85,3 +85,128 @@ console.log('reassigned let ' + firstName)
 
 const birthdate = '1365'
 // birthdate = birthdate.toISOString(); // can not reassigned
+
+
+/**
+ * oop programming
+ */
+
+var purchase = {
+    shoes : 100,
+    stateTax : 1.2,
+    totalPrice : function () {
+        return  this.shoes * this.stateTax
+    }
+}
+
+console.log(purchase.totalPrice())
+
+/**
+ * classes
+ * Constructor: The constructor is a special method for initializing new objects created from a class, allowing you to set properties at the time of instantiation.
+ */
+
+class Car {
+    constructor(color,speed) {
+        this.color = color
+        this.speed = speed
+    }
+
+    // method --> we can not use keyword "function" here
+    turboOn() {
+        console.log('turboOn')
+    }
+}
+
+let car1 = new Car('red','fast') // instance with new keyword
+car1.turboOn()
+
+
+/**
+ * Polymorphism: The ability of different classes to be treated as instances of the same class through a common interface, allowing for method overriding.
+ * Abstraction: The concept of simplifying complex systems by modeling classes based on essential characteristics while hiding unnecessary details.
+ */
+
+class Toyota extends Car{
+
+    // *** When using a default or empty constructor method, JavaScript implicitly calls the Object superclass to create the instance
+    // var toyota = Object.create(Toyota)
+
+    constructor(motor,passengers,color,speed) {
+        super(color,speed);
+        this.motor = motor
+        this.passengers = passengers
+    }
+
+    turboOn() {
+        console.log('turboOn')
+    }
+}
+
+/**
+ * contact() method
+ * "abc".concat("def"); // 'abcdef'
+ * ["abc"].concat(["def"]); // ['abc', 'def']
+ */
+
+/**
+ * String class
+ * let apple = new String("apple");
+ * apple; // --> String {"apple"}
+ *
+ * let pear = "pear";
+ * pear; // --> "pear"
+ */
+
+/**
+ * prototype : In JavaScript, the prototype is an object that can hold properties to be shared by multiple other objects.
+ * The prototype is an object that can have properties to be shared by multiple other objects.
+ * The prototype is an object from which other objects inherit properties and methods, allowing for shared functionality among instances of a class.
+ */
+var bird = {
+   hasWings : true,
+   canFly : true,
+   hasFeature : true,
+}
+var eagle = Object.create(bird) // create object as prototype
+console.log("eagle1 : " , eagle) // output : --> eagle1 : {}
+console.log("eagle1 has wings: " , eagle.hasWings)
+console.log("eagle1 can fly: " , eagle.canFly)
+console.log("eagle1 has feature: " , eagle.hasFeature)
+
+var penguin = Object.create(bird)
+penguin.hasWings = false
+console.log("penguin1 has wings: " , penguin) // output : --> penguin1 has wings:  { hasWings: false }
+
+/**
+ * default parameter in functions
+ */
+function noDefaultParameter(number) {
+    return number * 2
+}
+console.log("noDefaultParameter: " , noDefaultParameter()) // output : -->noDefaultParameter:  NaN (not a number - no exception)
+
+function withDefaultParameter(number = 2) {
+    return number * 2
+}
+console.log("withDefaultParameter: " , withDefaultParameter()) // output : --> withDefaultParameter:  4
+console.log("withDefaultParameter: " , withDefaultParameter(4)) // output : --> withDefaultParameter:  8
+
+class WithDefaultParams {
+    constructor(num1 = 1, num2 = 2, num3 = 3, string1 = "Result:", bool1 = true) {
+        this.num1 = num1;
+        this.num2 = num2;
+        this.num3 = num3;
+        this.string1 = string1;
+        this.bool1 = bool1;
+    }
+    calculate() {
+        if(this.bool1) {
+            console.log(this.string1, this.num1 + this.num2 + this.num3);
+            return;
+        }
+        return "The value of bool1 is incorrect"
+    }
+}
+var better = new WithDefaultParams();
+better.calculate(); // Result: 6
